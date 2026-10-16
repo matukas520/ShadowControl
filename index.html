@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d12">
+  <title>ShadowControl</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: #0b0d12;
+      color: #f4f5f8;
+      font-family: system-ui, sans-serif;
+    }
+    main {
+      width: 100%;
+      max-width: 520px;
+      padding: 32px;
+      background: #141821;
+      border: 1px solid #292f3d;
+      border-radius: 20px;
+    }
+    .logo { font-size: 14px; color: #a5b4fc; }
+    h1 { font-size: 34px; margin-bottom: 8px; }
+    p { color: #b6bdca; line-height: 1.6; }
+    .download {
+      display: block;
+      margin-top: 24px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #6878f5;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .download.disabled {
+      background: #343a49;
+      color: #c2c7d2;
+      cursor: not-allowed;
+    }
+    .note { font-size: 13px; margin-top: 18px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="logo">SC / SHADOWCONTROL</div>
+    <h1>ShadowControl</h1>
+    <p>
+      Управление собственным компьютером с подтверждением доступа
+      и обязательной авторизацией.
+    </p>
+
+    <a class="download disabled"
+       aria-disabled="true">
+      Windows-сборка готовится
+    </a>
+
+    <p class="note">
+      Скачивание станет доступно после подготовки и проверки
+      Windows-программы. Удалённый доступ не включается скрытно.
+    </p>
+  </main>
+</body>
+</html>
+
