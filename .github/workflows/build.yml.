@@ -1,0 +1,28 @@
+name: Build ShadowControl
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PyInstaller
+        run: pip install pyinstaller
+
+      - name: Build Windows application
+        run: pyinstaller --onefile --windowed --name ShadowControl windows-app.py
+
+      - name: Upload EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: ShadowControl-Windows
+          path: dist/ShadowControl.exe
